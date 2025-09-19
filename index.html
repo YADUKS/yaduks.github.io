@@ -9,31 +9,42 @@
 </head>
 <body>
 
-  <header>
-    <h1>Your Name</h1>
-    <p>Frontend Developer | UI/UX Enthusiast</p>
+  <!-- Banner with background image -->
+  <header class="banner">
+    <div class="overlay">
+      <h1>Your Name</h1>
+      <p>Frontend Developer | UI/UX Enthusiast</p>
+    </div>
   </header>
 
-  <section id="about">
+  <section id="about" class="reveal">
     <h2>About Me</h2>
     <p>Hello! I’m [Your Name], a passionate developer who loves building beautiful and functional websites. I enjoy working with HTML, CSS, JavaScript, and modern frameworks.</p>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="reveal">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>My Cool App</h3>
-      <p>A web app that helps you organize your tasks efficiently.</p>
-      <a href="https://github.com/yourusername/my-cool-app" target="_blank">View on GitHub</a>
+
+    <div class="project card">
+      <img src="images/my-cool-app.png" alt="My Cool App Screenshot">
+      <div class="content">
+        <h3>My Cool App</h3>
+        <p>A web app that helps you organize your tasks efficiently.</p>
+        <a href="https://github.com/yourusername/my-cool-app" target="_blank">View on GitHub</a>
+      </div>
     </div>
-    <div class="project">
-      <h3>Portfolio Website</h3>
-      <p>This very site – built using HTML, CSS, and deployed via GitHub Pages.</p>
-      <a href="https://github.com/yourusername/portfolio" target="_blank">View on GitHub</a>
+
+    <div class="project card">
+      <img src="images/portfolio.png" alt="Portfolio Website Screenshot">
+      <div class="content">
+        <h3>Portfolio Website</h3>
+        <p>This very site – built using HTML, CSS, and deployed via GitHub Pages.</p>
+        <a href="https://github.com/yourusername/portfolio" target="_blank">View on GitHub</a>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="reveal">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
     <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
@@ -44,5 +55,6 @@
     <p>© 2025 Your Name. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
