@@ -7,26 +7,37 @@ body {
   line-height: 1.6;
 }
 
-header {
-  background: #1a1a1a;
+/* Banner */
+.banner {
+  position: relative;
+  background: url('images/banner.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
-  padding: 40px 0;
+}
+
+.banner .overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
   text-align: center;
+  border-radius: 10px;
 }
 
-header h1 {
+.banner h1 {
   margin: 0;
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
-header p {
-  font-size: 1.2em;
+.banner p {
+  font-size: 1.3em;
   margin-top: 10px;
 }
 
 section {
   padding: 40px 20px;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -35,15 +46,35 @@ h2 {
   padding-bottom: 10px;
 }
 
+/* Project cards with image */
 .project {
+  display: flex;
+  gap: 20px;
   background: #f9f9f9;
-  padding: 20px;
   margin-bottom: 20px;
   border-left: 5px solid #007BFF;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project img {
+  width: 200px;
+  object-fit: cover;
+  border-radius: 0 10px 10px 0;
+}
+
+.project .content {
+  padding: 20px;
 }
 
 .project h3 {
   margin-top: 0;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 a {
@@ -60,4 +91,16 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px;
+}
+
+/* Scroll animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
